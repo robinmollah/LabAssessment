@@ -4,12 +4,12 @@ const main = require('../scripts/main');
 
 router.get('/selector/:paths', async (req, res) => {
     let list = await main.fs.dir(req.params.paths);
-    res.send(list);
+    res.send({cwd: require('os').homedir(), list: list});
 });
 
 router.get('/selector', async (req, res) => {
     let list = await main.fs.dir();
-    res.send(list);
+    res.send({cwd: require('os').homedir(), list: list});
 });
 
 module.exports = router;
