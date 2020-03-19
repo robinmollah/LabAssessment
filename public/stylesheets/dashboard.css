@@ -35,12 +35,18 @@ body{
 .files{
     background-color: #cff8f4;
 }
-.btn_select{
-    float: right;
+.btn_back{
     padding: 7px 30px;
     background-color: #62e7ba;
 }
-.btn_back{
+.root{
+    margin-left: 20px;
+    background-color: #52afb2;
+    border: 1px dashed;
+    font-weight: bold;
+}
+.btn_select{
+    float: right;
     padding: 7px 30px;
     background-color: #62e7ba;
 }

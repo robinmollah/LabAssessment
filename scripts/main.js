@@ -4,8 +4,9 @@ const fs = require('fs');
 module.exports.fs = {
     dir: function(path = require('os').homedir()){
         return new Promise((resolve, reject) => {
+            console.log(path);
             fs.readdir(path, (err, items) => {
-                if(err) reject("Cannot read folder");
+                if(err) reject(err);
                 resolve(items);
             })
         });
