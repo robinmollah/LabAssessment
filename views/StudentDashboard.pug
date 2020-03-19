@@ -3,15 +3,17 @@ html
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/dashboard.css')
-        script(type='scrip/js' src='/scripts/dashboard.js')
-        //link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='/scripts/dashboard.js')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     body
         div(class='banner_header')
             h1(style='color: white; font-size: 60px') Student Dashboard
         div(class='path_select')
             h3(style='font-size: 30px') Define Your Working Directory
-            form(action='/student/dashboard/test' method='GET')
-                input(type='file' webkitdirectory name='sadik' style='font-size: 20px')
-                input(type='text' name='sadik' )
-                button(type='submit' class='submit_path') GO!
+        div(class='controls')
+            button(class='btn_back') Back
+            button(class='btn_select') Select This Folder/File
+            div(class='files')
+                ul(id="list")
 

@@ -10,9 +10,6 @@ router.get('/', function(req, res, next) {
 router.get('/student/dashboard', function(req, res, next) {
     res.render('StudentDashboard');
 });
-router.get('/student/dashboard/test', function(req, res, next) {
-    console.log(req);
-});
 
 router.get('/compile/:file_name', function(req, res, next){
   console.log("Req", req.params.file_name);

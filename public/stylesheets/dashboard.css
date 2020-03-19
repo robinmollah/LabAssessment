@@ -1,10 +1,10 @@
 body{
     padding: 10px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: #b4e4e9;
+    background-image: url("../dashboardBackground.jpg");
 }
 .banner_header{
-    background-color: #393e46;
+    background-color: #183d40;
     padding: 50px;
     text-align: center;
     border-radius: 5px;
@@ -27,4 +27,37 @@ body{
     background-color: #27ad5c;
     cursor: pointer;
 
+}
+.controls{
+    padding: 20px;
+    background-color: #43c4be;
+}
+.files{
+    background-color: #cff8f4;
+}
+.btn_select{
+    float: right;
+    padding: 7px 30px;
+    background-color: #62e7ba;
+}
+.btn_back{
+    padding: 7px 30px;
+    background-color: #62e7ba;
+}
+#list{
+    padding: 20px;
+}
+li{
+    padding: 2px;
+    border-left: 3px solid;
+    display: table;
+    margin: 3px;
+    background-color: #a3e7e4;
+    transition: transform .2s;
+
+}
+li:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+    background-color: #c4f1f5;
 }
