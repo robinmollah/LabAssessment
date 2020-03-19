@@ -4,7 +4,14 @@ var main = require('../scripts/main');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Express' });
+});
+
+router.get('/student/dashboard', function(req, res, next) {
+    res.render('StudentDashboard');
+});
+router.get('/student/dashboard/test', function(req, res, next) {
+    console.log(req);
 });
 
 router.get('/compile/:file_name', function(req, res, next){

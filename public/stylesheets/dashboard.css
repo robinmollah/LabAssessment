@@ -1,0 +1,30 @@
+body{
+    padding: 10px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #b4e4e9;
+}
+.banner_header{
+    background-color: #393e46;
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.path_select{
+    text-align: center;
+    padding: 20px;
+    background-color: #29a19c;
+    color: white;
+}
+.submit_path {
+    padding: 2px 40px 2px 40px;
+    font-size: 20px;
+    background-color: #104324;
+    color: white;
+    border-radius: 10px;
+}
+.submit_path:hover{
+    background-color: #27ad5c;
+    cursor: pointer;
+
+}
