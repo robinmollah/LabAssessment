@@ -63,10 +63,10 @@ module.exports.test = function test(path) {
     });
 };
 
-module.exports.compile = function compile(file_path){
+module.exports.compile = function compile(file_path = 'R:\\TheMagicians\\WorkingDirectory\\Square.java'){
     return new Promise((resolve, reject) => {
         // TODO extract file_name & working directory from path
-        let working_directory = 'R:\\TheMagicians\\WorkingDirectory';
+        let working_directory = 'R:\\TheMagicians\\WorkingDirectory\\';
         let file_name = 'Square.java';
         exec('javac ' + file_name,{cwd: working_directory}, function (error, stdout, stderr){
             // TODO send successful message
