@@ -11,9 +11,13 @@ router.get('/student/dashboard', function(req, res, next) {
     res.render('StudentDashboard');
 });
 
-router.get('/compile/:file_name', function(req, res, next){
+router.post('/compile', function(req, res, next){
   console.log("Req", req.params.file_name);
-  res.send(main.compile(req.body.file_name));
+  main.compile().then((response) => {
+    res.json(response);
+  }).catch((error) => {
+      res.json(error);
+  });
 });
 
 router.post('/run', function(req, res, next){

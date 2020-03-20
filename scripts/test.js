@@ -1,9 +1,7 @@
-var main = require('./main');
+const main = require('./main');
 
-(
-    async () => {
-        let out = await main.fs.dir();
-        console.log("Compile", out);
-        console.log("text" + require('os').homedir());
-    }
-)();
+main.test().then(response => {
+    console.log(response.stdout);
+}).catch(error => {
+    console.error(error)
+});

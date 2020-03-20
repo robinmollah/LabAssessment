@@ -28,6 +28,5 @@ function openPath(tag) {
             }));
         }
     })
-
 }
 
