@@ -54,7 +54,7 @@ module.exports.test = function test(path) {
         let listOfJavaFiles = 'Square.java'; // TODO Single space seperated list of .java files
         let listOfUnitTestFiles = 'TestSquare.java'; // TODO Single space seperated list of Junit files
     
-        let cwd = 'R:\\TheMagicians\\WorkingDirectory\\';
+        let cwd = 'E:\\LabAss\\';
         let compilationResult = await compileRunners(cp, listOfJavaFiles, listOfUnitTestFiles, cwd);
         console.log('compilationres: ', compilationResult);
     
@@ -63,11 +63,12 @@ module.exports.test = function test(path) {
     });
 };
 
-module.exports.compile = function compile(file_path = 'R:\\TheMagicians\\WorkingDirectory\\Square.java'){
+module.exports.compile = function compile(file_path = 'E:\\LabAss\\Square.java'){
     return new Promise((resolve, reject) => {
         // TODO extract file_name & working directory from path
-        let working_directory = 'R:\\TheMagicians\\WorkingDirectory\\';
-        let file_name = 'Square.java';
+        let n1 = file_path.lastIndexOf('\\');
+        let working_directory = file_path.slice(0,n1);
+        let file_name = file_path.slice(n1+1);;
         exec('javac ' + file_name,{cwd: working_directory}, function (error, stdout, stderr){
             // TODO send successful message
             if(!stderr) resolve({status: 'success'});
@@ -80,7 +81,7 @@ module.exports.run = function run(file_path){
     return new Promise(resolve => {
         // TODO extract file_name and working_directory from path
         // TODO check if already compiled or compile first
-        exec('java ' + 'SquareTest', {cwd: 'R:\\TheMagicians\\'},
+        exec('java ' + 'SquareTest', {cwd: 'E:\\LabAss\\'},
             (error, stdout, stderr) => {
             resolve([error, stdout, stderr]);
         });
